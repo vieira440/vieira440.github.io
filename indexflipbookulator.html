@@ -8,6 +8,8 @@
   </head>
   <body>
     <main>
+      <img src="./Images/logo.png" />
+      <h1>Parker Valve Division Valve Schematic Creator</h1>
       <div class="ValveAssemblyParameters">
         <section class="valve">
           <label for="valveseries">Valve Series:</label>
@@ -18,15 +20,16 @@
             <option value="VG35">VG35</option>
           </select>
         </section>
-        <section class="btn-group">
-          <button class="increment-button" id="decrease">-</button>
-          <button id="panes"></button>
-          <button class="increment-button" id="increase">+</button>
-        </section>
       </div>
+      <section class="btn-group">
+        <button class="increment-button" id="decrease">-</button>
+        <button id="panes"></button>
+        <button class="increment-button" id="increase">+</button>
+      </section>
       <div class="valveSections" id="valveSections"></div>
       <div></div>
     </main>
-    <script src="flipbookulator.js"></script>
+    <script src="flipbookulator.js" type="module"></script>
+    <!-- <script src="Sections.js" type="module"></script> -->
   </body>
 </html>

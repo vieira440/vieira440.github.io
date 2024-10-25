@@ -1,5 +1,13 @@
+body {
+  background-color: rgb(254, 209, 62);
+}
+
 main {
     display: grid;
+}
+
+p {
+  font-size: smaller;
 }
 
 /*
@@ -10,14 +18,13 @@ img{
 }
 */
 
-.ValveAssemblyParameters{
-    display: grid;
-    grid-template-columns: auto auto;
+.btn-group{
+    margin: auto;
 }
 
-.valve, .inlet, .workingSection, .outlet {
+/* .valve, .inlet, .workingSection, .outlet {
     padding: 10pt;
-}
+} */
 
 
 .valveSections{
@@ -69,9 +76,9 @@ object-fit: cover;
   float: left; /* Float the buttons side by side */
 }
 
-.btn-group button:not(:last-child) {
+/* .btn-group button:not(:last-child) {
   border-right: none; /* Prevent double borders */
-}
+} */
 
 /* Clear floats (clearfix hack) */
 .btn-group:after {
