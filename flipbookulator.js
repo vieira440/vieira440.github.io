@@ -29,7 +29,7 @@ const populateInlet = function () {
   inletLabel.for = "inletSelect";
   inletLabel.innerText = "Inlet:";
   let inletImg = document.createElement("img");
-  inletImg.src = "images/inlet/Standard end inlet section.jpg";
+  inletImg.src = "./Images/inlet/Standard end inlet section.jpg";
   inletImg.id = "inletImg";
   inletImg.className = "valveSchematic";
   let inletInfo = document.createElement("p");
@@ -50,7 +50,7 @@ const populateInlet = function () {
   valveSections.appendChild(inletSection);
 
   inletSelect.addEventListener("change", () => {
-    inletImg.src = "images/inlet/" + inletSelect.value + ".jpg";
+    inletImg.src = "./Images/inlet/" + inletSelect.value + ".jpg";
     inletInfo.innerHTML = inlets.find(
       (x) => x.name == inletSelect.value
     ).info;
@@ -68,7 +68,7 @@ const populateOutlet = function () {
   outletLabel.for = "outletSelect";
   outletLabel.innerText = "Outlet:";
   let outletImg = document.createElement("img");
-  outletImg.src = "images/outlet/Standard Tank Return Outlet Section.jpg";
+  outletImg.src = "./Images/outlet/Standard Tank Return Outlet Section.jpg";
   outletImg.id = "outletImg";
   outletImg.className = "valveSchematic";
   let outletInfo = document.createElement("p");
@@ -89,7 +89,7 @@ const populateOutlet = function () {
   valveSections.appendChild(outletSection);
 
   outletSelect.addEventListener("change", () => {
-    outletImg.src = "images/outlet/" + outletSelect.value + ".jpg";
+    outletImg.src = "./Images/outlet/" + outletSelect.value + ".jpg";
     outletInfo.innerHTML = outlets.find(
       (x) => x.name == outletSelect.value
     ).info;
@@ -130,7 +130,7 @@ const addCenter = function (centerSections) {
   centerLabel.for = "centerSelect" + (centerSections - 2);
   centerLabel.innerText = "Center Valve " + (centerSections - 2) + ":";
   let centerImg = document.createElement("img");
-  centerImg.src = "images/" + centers[0].name + ".jpg";
+  centerImg.src = "./Images/" + centers[0].name + ".jpg";
   centerImg.id = "inletImg";
   centerImg.className = "valveSchematic";
   let centerInfo = document.createElement("p");
@@ -150,7 +150,7 @@ const addCenter = function (centerSections) {
   centerSection.appendChild(centerInfo);
 
   centerSelect.addEventListener("change", () => {
-    centerImg.src = "images/" + centerSelect.value + ".jpg";
+    centerImg.src = "./Images/" + centerSelect.value + ".jpg";
     centerInfo.innerHTML = centers.find(
       (x) => x.name == centerSelect.value
     ).info;
