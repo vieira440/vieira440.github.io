@@ -18,6 +18,11 @@ increaseButton.addEventListener("click", () => {
   addCenter(panes.innerText);
 });
 
+const series = document.getElementById("valveSeries").value;
+series.addEventListener("change", () => {
+  let inletInfo = document.getElementById
+})
+
 const populateInlet = function () {
   let inletSection = document.createElement("section");
   inletSection.id = "inlet";
@@ -51,11 +56,35 @@ const populateInlet = function () {
 
   inletSelect.addEventListener("change", () => {
     inletImg.src = "./Images/inlet/" + inletSelect.value + ".jpg";
-    inletInfo.innerHTML = inlets.find(
-      (x) => x.name == inletSelect.value
-    ).info;
+    let series = document.getElementById("valveSeries").value;
+    switch (series) {
+      case "V10":
+        inletInfo.innerHTML = inlets.find(
+          (x) => x.name == inletSelect.value
+        ).V10;
+        break;
+      case "V20":
+        inletInfo.innerHTML = inlets.find(
+          (x) => x.name == inletSelect.value
+        ).V20;   
+        break;     
+      case "VA35":
+        inletInfo.innerHTML = inlets.find(
+          (x) => x.name == inletSelect.value
+        ).VA35; 
+        break;
+      case "VG35":
+      inletInfo.innerHTML = inlets.find(
+        (x) => x.name == inletSelect.value
+      ).VG35;  
+      break;  
+      default:
+        inletInfo.innerHTML = inlets.find(
+          (x) => x.name == inletSelect.value
+        ).info;
+    }
   });
-};
+};  //TODO Complete outlets and centers
 
 const populateOutlet = function () {
   var outletSection = document.createElement("section");

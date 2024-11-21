@@ -1,14 +1,16 @@
 class ValveSection {
-    constructor(name, info) {
+    constructor(name, info, V10, V20) {
         this._name = name;
-        this._info = info;
+        this._info = info
+        this._V10 = V10;
+        this._V20 = V20
     }
 }
 
 export const inlets = [];
-inlets.push({ name: "Standard end inlet section", info: "Stuff about Standard inlets" });
-inlets.push({ name: "Pump unloading end inlet", info: "Stuff about Pump inlets" });
-inlets.push({ name: "Regenerative End Inlet", info: "Stuff about Regenerative inlets" });
+inlets.push({ name: "Standard end inlet section", info: "Stuff about Standard v10 inlets", V10: "Stuff about Standard v10 inlets", V20: "Stuff about Standard v20 inlets", VA35: "VA35", VG35: "VG35" });
+inlets.push({ name: "Pump unloading end inlet", info: "Stuff about Pump inlets", V10: "Stuff about Pump v10 inlets", V20: "Stuff about Pump v20 inlets", VA35: "VA35", VG35: "VG35"  });
+inlets.push({ name: "Regenerative End Inlet", info: "Stuff about Regenerative inlets", V10: "Stuff about Regenerative v10 inlets", V20: "Stuff about Regenerative v20 inlets", VA35: "VA35", VG35: "VG35"  });
 
 export const centers = [];
 centers.push({ name: "A20 & A35 Double Acting Cylinder Series", info: "Stuff about A20 middles" });
